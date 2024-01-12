@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+<h3>Добавить поставщика</h3>
+<form action="/suppliers/create" method="post">
+    <div class="form-group col-xs-3">
+        <label for="exampleInputEmail1">Имя</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" name="firstName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail2">Фамилия</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Фамилия" name="lastName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail3">Компания</label>
+        <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Компания" name="company">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail4">Телефон</label>
+        <input type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Телефон" name="phone">
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить поставщика</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>
